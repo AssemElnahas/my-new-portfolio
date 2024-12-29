@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    scroll-behavior: smooth;
+  }
+  
+  header {
+    background: #2c3e50;
+    color: white;
+    padding: 40px;
+    text-align: center;
+  }
+  header img{
+    margin-left: 50px;
+    margin-top:20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 3em;
+  }
+  header h1:hover{
+    color: yellow;
+  }
+  header p {
+    font-size: 1.2em;
+  }
+  
+  h2 {
+    color: #2d3f52;
+  }
+  h2:hover{
+    color: #067df5;
+  }
+  section {
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin: 5px 0;
+  }
+  
+  a {
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  #chatbot {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    padding: 10px;
+  }
+  
+  .chat-box {
+    height: 200px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .user-message {
+    text-align: right;
+    margin: 5px 0;
+  }
+  
+  .bot-message {
+    text-align: left;
+    margin: 5px 0;
+  }
+  /* Projects Section */
+  .project {
+    background-color: #58a3b6;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+  }
+  
+  .project h3 {
+    margin-top: 0;
+  }
+  .project h3:hover{
+    color: yellow;
+  }
+  
+  footer {
+    width: 100%;
+    background-color: #5878d1;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+  }
+  footer p {
+    margin: 0;
+  }
+  

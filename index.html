@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asem Elnahas - Portfolio</title>
+  <script>
+     window.onload = function() {
+      alert("Welcome to my portfolio!");
+      document.getElementById("darkModeToggle").addEventListener("click", toggleDarkMode);
+      document.querySelector("form").addEventListener("submit", validateForm);
+    };
+
+    function sendMessage() {
+      var userMessage = document.getElementById("userMessage").value;
+      var chatBox = document.getElementById("chatBox");
+
+      if (userMessage.trim() === "") {
+        return;
+      }
+
+      var userDiv = document.createElement("div");
+      userDiv.className = "user-message";
+      userDiv.textContent = userMessage;
+      chatBox.appendChild(userDiv);
+
+      var botDiv = document.createElement("div");
+      botDiv.className = "bot-message";
+      botDiv.textContent = getBotResponse(userMessage);
+      chatBox.appendChild(botDiv);
+
+      document.getElementById("userMessage").value = "";
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    function getBotResponse(message) {
+      var responses = {
+        "hello": "Hi there! How can I help you today?",
+        "hi": "Hello! How can I assist you?",
+        "how are you": "I'm just a bot, but I'm here to help!",
+        "what is your name": "I'm GitHub Copilot, your assistant.",
+        "bye": "Goodbye! Have a great day!"
+      };
+
+      var lowerCaseMessage = message.toLowerCase();
+      return responses[lowerCaseMessage] || "I'm not sure how to respond to that.";
+    }
+
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+
+    function validateForm(event) {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var message = document.getElementById("message").value;
+
+      if (name.trim() === "" || email.trim() === "" || message.trim() === "") {
+        alert("All fields are required!");
+        event.preventDefault();
+      }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="image.png" alt="">
+    <h1>Asem Elnahas</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am an AI Developer with a passion for machine learning, NLP, voice recognition,and Web Development. I enjoy building interactive web apps and working with cutting-edge technologies in AI.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <ul>
+      <li>Python, Scikit-learn, Pyttsx3, Tkinter, Streamlit</li>
+      <li>Machine Learning: Supervised & Unsupervised Learning</li>
+      <li>Data Science: Pandas, Numpy, Matplotlib, Seaborn</li>
+      <li>AI & NLP: Natural Language Processing, Speech Recognition</li>
+    </ul>
+  </section>
+  
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Souq: Online Store</h3>
+      <p>A platform similar to Amazon built using Streamlit, offering product search, user interaction, and dynamic listings.</p>
+    </div>
+    <div class="project">
+      <h3>AI Chatbot (T-Bot)</h3>
+      <p>AI-driven chatbot integrated with social media platforms for customer assistance and interaction.</p>
+    </div>
+    <div class="project">
+      <h3>Video Comparison Using OpenCV</h3>
+      <p>A video comparison tool with a Tkinter interface, allowing users to compare videos using OpenCV.</p>
+    </div>
+    <div class="project">
+      <h3>Real-time Obstacle Detection</h3>
+      <p>A system detecting obstacles in front of a user, providing warnings through a Tkinter-based interface.</p>
+    </div>
+    <div class="project">
+      <h3>Speech Recognition System</h3>
+      <p>A voice recognition system with text-to-speech capability, implemented using Python libraries.</p>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <ul>
+      <li>AI Course (Route)</li>
+      <img src="" alt="">
+      <li>Data Science Specialization (Professional)</li>
+    </ul>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <ul>
+      <li>Bachelor's in Computer Science from HTI</li>
+    </ul>
+
+  <section id="contact">
+    <h2>Contact Information</h2>
+    <ul>
+      <li>Email: <a href="mailto:assem.elnahas15@gmail.com">assem.elnahas15@gmail.com</a></li>
+      <li>LinkedIn: <a href="#">https://www.linkedin.com/in/assem-elnahas-28887429a/</a></li>
+      <li>GitHub: <a href="#">https://github.com/AssemElnahas</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Asem Elnahas. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
